@@ -1,0 +1,10 @@
+#!/usr/bin/env python3
+
+import skilstak.colors as c
+
+try:
+    print(c.clear)
+    while True:
+        print(c.rc() + "Hello World " + c.x, end='')
+except KeyboardInterrupt:
+    exit()

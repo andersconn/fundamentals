@@ -1,0 +1,8 @@
+#!/usr/bin/env python3
+
+import skilstak.colors as c
+
+print(c.reset + c.r + "What is your name?")
+    name = input(c.blue + "--->")
+print("hello" name
+
