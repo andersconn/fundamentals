@@ -7,7 +7,7 @@ def plain():
     """Clears screen and prints 'Hello World."""
     print(c.clear + c.rc() +  "Hello World" + c.reset)
 
-def hello(kind='plain')
+def hello(kind='plain'):
     """Main 'Hello World' function"""
     try:
         if kind == 'color':
