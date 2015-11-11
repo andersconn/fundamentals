@@ -3,15 +3,27 @@
 import skilstak.colors as c
 import time
 
-def plain():
+def print_plain(message):
     """Clears screen and prints 'Hello World."""
-    print(c.clear + c.rc() +  "Hello World" + c.reset)
+    print(c.clear + "Hello World" + c.reset)
+
+def print_color()
+    """Prints hello in color"""
+    print(c.clear)
+    while True:
+        print(c.clear + c.rc() + "Hello World" + c.reset)        
+
+def print_muti()        
+    """prints 'hello world' in fancy random colors"""
+    while True:
+        print(c.clear + c.multi(message))
+        time.sleep(0.5)
 
 def hello(kind='plain'):
     """Main 'Hello World' function"""
     try:
         if kind == 'color':
-            color()
+             color()
         elif kind.startswith('m'):
             multi()
         else:
@@ -20,8 +32,4 @@ def hello(kind='plain'):
         return
 
 if __name__ == '__main__':
-    import sys
-    if len(sys.argv) ==1:
-        hello()
-    else:
-        hello(sys.argv[1])
+    print_plain("hello world")
