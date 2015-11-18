@@ -8,11 +8,26 @@ def print_plain(message="hello world"):
     """prints <message> in plain"""
     print(message)
 
-def print_fancy(message="hello world")
+def print_fancy(message="hello world"):
     """prints 'hello world' like a fancy man"""
     print(c.clear)
     while True:
-        print(c.rc() + message + c.reset, end=" "
+        print(c.rc() + message + c.reset, end=" ")
 
 if __name__ == "__main__":
-    print_plain()    
+    from sys import argv
+    who = "world" 
+    option = ""
+    
+    sys.argv   
+    if len(argv).startswith('-')
+        option = argv[1]
+    else:    
+       name = argv[1]
+    
+   elif len(argv) >2:
+            argv[2] = option
+        else:            
+            argv[3] = name
+            
+
