@@ -5,32 +5,49 @@ import time
 
 def print_plain(message):
     """Clears screen and prints 'Hello World."""
-    print(c.clear + "Hello World" + c.reset)
+    print(c.clear + message + c.reset)
 
-def print_color()
+def print_color(message):
     """Prints hello in color"""
     print(c.clear)
     while True:
-        print(c.clear + c.rc() + "Hello World" + c.reset)        
+        print(c.clear + c.rc() + message + c.reset)        
 
-def print_muti()        
+def print_multi(message):        
     """prints 'hello world' in fancy random colors"""
     while True:
         print(c.clear + c.multi(message))
         time.sleep(0.5)
 
-def hello(kind='plain'):
-    """Main 'Hello World' function"""
-    try:
-        if kind == 'color':
-             color()
-        elif kind.startswith('m'):
-            multi()
+def parse_args():
+    from sys import argv as a
+    who = "world"
+    option = ""
+    message = ""
+    if len(a) > 2:
+        option = a[1]
+        who = a[2]
+    elif len(a) == 2:
+        if a[1].startswith("-"):
+            option = a[1]
         else:
-            plain()    
-    except KeyboardInterrupt:
-        return
+            who = a[1]
+    return who, option
+
 
 if __name__ == '__main__':
-    name =='world'
+
+    who, option = parse_args()
+    message = 'hello ' + who + '!'
+
+    try:
+        if option == "-m":
+            print_multi(message)
+        elif option == "-c":
+            print_color(message)
+        else:
+            print_plain(message)
+    except KeyboardInterrupt:
+        exit()
+
 
