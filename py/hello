@@ -32,4 +32,5 @@ def hello(kind='plain'):
         return
 
 if __name__ == '__main__':
-    print_plain("hello world")
+    name =='world'
+
