@@ -17,6 +17,21 @@ var printMulti = function (name) {
   }
 }
 
+var name = "hello world";
+
+var option = "-p";
+
 var firstArg = process.argv[2];
 
-printMulti(firstArg); 
+if (firstArg[0] === "-") {
+  option = process.argv[2]
+}  
+
+if (option === "-m") { 
+  printMulti(name);
+} else if (option === "-b") {
+  printBlue(name); 
+} else {
+  printPlain(name)
+}
+
